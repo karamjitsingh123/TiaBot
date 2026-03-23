@@ -6,8 +6,7 @@ st.set_page_config(page_title="Tia - AI Agent", page_icon="✈️")
 st.title("✈️ Tia - Air India Express Assistant")
 
 # API Key Setup
-genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
-
+genai.configure(api_key="AIzaSyAA23Um66iv6OhkyZBdV-Ezd6luDg6QEv4")
 # Knowledge Base
 knowledge_text = """
 Air India Express Rules:
