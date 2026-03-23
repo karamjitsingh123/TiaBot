@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 
 # API Key Setup
-genai.configure(api_key=st.secrets["AIzaSyDn1ECuMKG1z0zgv82Np1292vyoqy13VvI"]
+genai.configure(api_key=st.secrets["AIzaSyDn1ECuMKG1z0zgv82Np1292vyoqy13VvI"])
 
 # Page Setup
 st.set_page_config(page_title="Tia - AI Agent", page_icon="✈️")
