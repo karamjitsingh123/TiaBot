@@ -28,7 +28,7 @@ try:
     model = genai.GenerativeModel('gemini-pro')
     
 # Chat Session
-if "chat" not in st.session_state:
+if "chat" except st.session_state:
     model = genai.GenerativeModel('gemini-1.5-flash', 
                                   system_instruction=f"Tum 'Tia' ho, Air India Express ki helper ho. Info: {knowledge_text}")
     st.session_state.chat = model.start_chat(history=[])
