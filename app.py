@@ -1,12 +1,14 @@
 import streamlit as st
 import google.generativeai as genai
 
+# API Key Setup
+genai.configure(api_key=st.secrets["AIzaSyDn1ECuMKG1z0zgv82Np1292vyoqy13VvI"]
+
 # Page Setup
 st.set_page_config(page_title="Tia - AI Agent", page_icon="✈️")
-st.title("✈️ khushi - Assistant")
+st.title("✈️ Tia - Air India Express Assistant")
 
-# API Key Setup
-genai.configure(api_key="AIzaSyBL-LShNmIL3cDMk60OoDRYtnBWfjbEi5c")
+
 # Knowledge Base
 knowledge_text = """
 Air India Express Rules:
@@ -14,7 +16,17 @@ Air India Express Rules:
 - Food: Flight mein paid meals available hain.
 - Refund: Non-refundable tickets mein paisa wapas nahi hota.
 """
+# Key Check
+if API_KEY == "AIzaSyDn1ECuMKG1z0zgv82Np1292vyoqy13VvI":
+    st.error("AIzaSyDn1ECuMKG1z0zgv82Np1292vyoqy13VvI")
+    st.stop()
 
+try:
+    genai.configure(api_key=API_KEY)
+    
+    # Model Setup (Simple Version)
+    model = genai.GenerativeModel('gemini-pro')
+    
 # Chat Session
 if "chat" not in st.session_state:
     model = genai.GenerativeModel('gemini-1.5-flash', 
