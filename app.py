@@ -3,10 +3,10 @@ import google.generativeai as genai
 
 # Page Setup
 st.set_page_config(page_title="Tia - AI Agent", page_icon="✈️")
-st.title("✈️ Tia - Air India Express Assistant")
+st.title("✈️ khushi - Assistant")
 
 # API Key Setup
-genai.configure(api_key="AIzaSyAA23Um66iv6OhkyZBdV-Ezd6luDg6QEv4")
+genai.configure(api_key="AIzaSyBL-LShNmIL3cDMk60OoDRYtnBWfjbEi5c")
 # Knowledge Base
 knowledge_text = """
 Air India Express Rules:
